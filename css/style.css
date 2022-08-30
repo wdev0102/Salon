@@ -1,0 +1,2456 @@
+/*
+Theme Name: Ranking
+*/
+
+
+/*reset*/
+
+html,
+body,
+dl,
+dt,
+dd,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+body {
+    background: url(../img/bg.png);
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+small {
+    font-size: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #000000;
+    font-size: 1.5rem;
+    /*background-color: #F3F8FC;*/
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+section {
+    overflow: hidden;
+}
+
+select,
+input,
+textarea {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    /*    display: block;*/
+}
+
+a:link {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    color: #000000;
+}
+
+a:active {
+    text-decoration: none;
+    color: #000000;
+}
+
+img {
+    border: none;
+    width: 100%;
+    /*    max-width: 100%;*/
+}
+
+.sp-collapse.spcollapsing {
+    transition-duration: 0.15s !important;
+}
+
+.inner {
+    padding: 0 60px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.innerBtnTop1 {
+    overflow: initial;
+}
+
+.wrapper {
+    width: 1138px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0 110px 0;
+}
+
+.showSp {
+    display: none;
+}
+
+
+/*Header*/
+
+.header {
+    width: 1138px;
+    /*width: 100vw;*/
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    transform: translateX(-50%) translateY(0%);
+    box-shadow: 1px 1px 10px #a5c0ee, -1px -1px 10px #f9c5ec;
+    transition: all .4s ease-in-out
+}
+
+.header--unpinned {
+    transform: translateX(-50%) translateY(-150%)
+}
+
+.mainLogo {
+    width: 313px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.headerContainer {
+    width: 100%;
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec);
+    box-shadow: 1px 1px 10px #a5c0ee, -1px -1px 10px #f9c5ec;
+    padding: 17px 0;
+    box-sizing: border-box;
+}
+
+
+/*End header*/
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+
+/* start top banner */
+
+.topBanner {
+    position: relative;
+    padding: 23px 25px 13px 10px;
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid #707070;
+}
+
+.topBannerImg {
+    width: 100%;
+}
+
+.topSearch {
+    width: 72%;
+}
+
+.advContent {
+    padding: 0 0 10px 0;
+    left: 77px;
+    position: relative;
+}
+
+.advContent .version {
+    content: '';
+    position: absolute;
+    background: url(images/date.svg);
+    top: -13px;
+    left: 30px;
+    width: 293px;
+    max-width: 100%;
+    height: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.versionContent {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.56);
+}
+
+.advContent .topFive {
+    width: 100%;
+}
+
+.topFiveContent {
+    position: relative;
+    display: inline-block;
+}
+
+.advContent .topFiveContent img {
+    width: 343px;
+    height: auto;
+    max-width: 100%;
+}
+
+p.topNumber {
+    position: absolute;
+    bottom: 23px;
+    right: 20px;
+    letter-spacing: 3px;
+    font-size: 5.1rem;
+    font-weight: 900;
+    color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+p.topNumber strong {
+    font-size: 7.8rem;
+}
+
+.advantages {
+    max-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -7px;
+}
+
+.advantages li {
+    width: 84px;
+    height: 68px;
+    background: #EEB9B4;
+    border-radius: 17.483px;
+    padding: 4px;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+}
+
+.advantages li p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #ff5374;
+    border-radius: 13.386px;
+    border: 1px solid #fff;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.3;
+}
+
+
+/*.advantages li span {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: #ff5374;
+	border-radius: 13.386px;
+	border: 1px solid #fff;
+	font-weight: bold;
+	color: #fff;
+	font-size: 1.5rem;
+	text-align: center;
+	box-sizing: border-box;
+	line-height: 1.3;
+}*/
+
+.advantages li:nth-child(odd) p {
+    font-size: 2.2rem;
+}
+
+.advantages li:first-child:before {
+    content: '';
+    position: absolute;
+    top: -44px;
+    left: -60px;
+    background: url(images/compare_tag.svg);
+    width: 85px;
+    height: 54px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.advantages li:last-child p {
+    font-size: 1.4rem;
+}
+
+.advantages li span b {
+    font-size: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.searchBox {
+    padding: 10px 10px 13px 10px;
+    background: #FFFFFF;
+    border: 2px solid #9C304A;
+}
+
+.searchBox .groupSelect {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.searchBox .customSelect {
+    width: 32.3%;
+    display: inline-block;
+    position: relative;
+}
+
+.customSelect {
+    cursor: pointer;
+    height: 18.222px;
+}
+
+.customSelectWrapper {
+    border: 1px solid #838383;
+    border-radius: 4.5px;
+}
+
+.customSelect select {
+    width: 100%;
+    height: 18.222px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: #4d4d4d;
+    background: none;
+    z-index: 2;
+    font-size: 0.845rem;
+    text-align-last: center;
+    padding-right: 23px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.customSelect::after {
+    content: "";
+    color: #fff;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    border-top: 8px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    z-index: 1;
+}
+
+.customSelect::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    width: 22px;
+    height: 20px;
+    border-radius: 3.71px;
+    background: #9C304A;
+    z-index: 1;
+    -webkit-box-shadow: 1.5px 1.5px 0px 0px rgba(31, 86, 128, 0.42);
+    -moz-box-shadow: 1.5px 1.5px 0px 0px rgba(31, 86, 128, 0.42);
+    box-shadow: 1.5px 1.5px 0px 0px rgba(31, 86, 128, 0.42);
+}
+
+.searchBox .customSelect {
+    width: 26%;
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
+
+.searchBox .groupCheckbox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.searchBox .customCheckbox {
+    width: 34%;
+    /*min-width: 137px;*/
+    display: inline-block;
+    position: relative;
+    margin-top: 9px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+.searchBox .customCheckbox:nth-child(1),
+.searchBox .customCheckbox:nth-child(4) {
+    width: 28%;
+}
+
+.customCheckbox input[type="checkbox"] {
+    display: none;
+}
+
+.customCheckbox label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.customCheckbox label input:checked~.checkmark:after {
+    display: block;
+    content: "";
+    background: #a3a3a3;
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+
+.customCheckbox .virContent {
+    vertical-align: middle;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    font-weight: normal;
+    color: #333333;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.customCheckbox .checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #838383;
+    background: #ffffff;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+    box-sizing: border-box;
+}
+
+.btnSearch button {
+    color: #fff;
+    font-size: 1.8rem;
+    background: #27CFCE;
+    font-weight: 900;
+    line-height: 1;
+    border-radius: 9.623px;
+    outline: none;
+    border: none;
+    width: 264px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto 0 auto;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(31, 86, 128, 0.39);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(31, 86, 128, 0.39);
+    box-shadow: 2px 2px 0px 0px rgba(31, 86, 128, 0.39);
+    cursor: pointer;
+}
+
+.btnSearch button:hover {
+    opacity: 0.6;
+}
+
+
+/* end top banner */
+
+
+/* start rating star */
+
+.c-rating {
+    display: flex;
+}
+
+.c-rating span {
+    display: inline-block;
+    margin-right: 11px;
+    width: 48.762px;
+    height: 46.432px;
+    border: 0;
+    text-indent: -9999px;
+    outline: none;
+    background: url("images/empty-star.svg") center/cover no-repeat;
+    background-size: 100% !important;
+}
+
+.c-rating span:last-child {
+    margin-right: 0;
+}
+
+.c-rating[data-rating-value="0"] span:nth-child(-n+0) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="0.5"] span:nth-child(-n+1) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="0.5"] span:nth-child(1) {
+    background: url("images/half-star.svg") center/cover no-repeat, url("images/empty-star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="1"] span:nth-child(-n+1) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="1.5"] span:nth-child(-n+2) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="1.5"] span:nth-child(2) {
+    background: url("images/half-star.svg") center/cover no-repeat, url("images/empty-star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="2"] span:nth-child(-n+2) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="2.5"] span:nth-child(-n+3) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="2.5"] span:nth-child(3) {
+    background: url("images/half-star.svg") center/cover no-repeat, url("images/empty-star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="3"] span:nth-child(-n+3) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="3.5"] span:nth-child(-n+4) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="3.5"] span:nth-child(4) {
+    background: url("images/half-star.svg") center/cover no-repeat, url("images/empty-star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="4"] span:nth-child(-n+4) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="4.5"] span:nth-child(-n+5) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="4.5"] span:nth-child(5) {
+    background: url("images/half-star.svg") center/cover no-repeat, url("images/empty-star.svg") center/cover no-repeat;
+}
+
+.c-rating[data-rating-value="5"] span:nth-child(-n+5) {
+    background: url("images/star.svg") center/cover no-repeat;
+}
+
+
+/* end rating star */
+
+
+/*Block*/
+
+.wrapperContainer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContent {
+    width: 860px;
+    box-shadow: 1px 1px 5px #888888;
+    position: relative;
+    /*max-width: 78.125%;*/
+}
+
+.sidebarContent {
+    width: 200px;
+    max-width: 20.833%;
+}
+
+
+/*End block*/
+
+
+/* start recommend block */
+
+.recommendBlock {
+    margin-top: 25px;
+    width: 728px;
+    max-width: 100%;
+    background-image: url('images/bg_recommend.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.recommendBlock p {
+    font-size: 5.1rem;
+    line-height: 1;
+    color: #333333;
+    font-weight: bold;
+}
+
+.recommendBlock p span {
+    font-size: 4.1rem;
+    font-weight: normal;
+}
+
+.recommendBlock p.recommendYellow {
+    font-size: 3.6rem;
+    display: inline-flex;
+    height: 60px;
+    align-items: center;
+    background-color: #FDDF48;
+    padding: 0 10px 0 27px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.tableRanking {
+    width: 694px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 73px;
+    position: relative;
+}
+
+.tableRanking:after {
+    content: '';
+    position: absolute;
+    bottom: -63px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 47px 163px 0 163px;
+    border-color: #ea527a transparent transparent transparent;
+}
+
+.tableRanking .tHead {
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: bold;
+    background: #ff5374;
+    display: flex;
+}
+
+.tableRanking .headerLeft {
+    width: 34.2%;
+    text-align: center;
+    padding: 22px 0;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: none;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.tableRanking .headerRight {
+    width: 65.8%;
+    text-align: center;
+    padding: 22px 0;
+    border: 1px solid #000;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.tableRanking .colLeft {
+    width: 34.2%;
+    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: flex-end;
+    border: 1px solid #000;
+    border-right: none;
+    border-bottom: none;
+    align-items: center;
+}
+
+.tableRanking .colRight {
+    width: 65.8%;
+    border: 1px solid #000;
+    border-bottom: none;
+    padding: 18px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tableRanking ul li:first-child .colLeft,
+.tableRanking ul li:first-child .colRight {
+    border-top: none;
+}
+
+.tableRanking .rankNumber {
+    width: 113px;
+    height: 129px;
+    position: relative;
+    left: -6px;
+}
+
+.tableRanking .rankNumber span {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 4.2rem;
+    color: #939393;
+    font-weight: bold;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.tableRanking .rankNumber img {
+    width: 100%;
+}
+
+.tableRanking .tBody {
+    border-bottom: 1px solid #000;
+}
+
+.tableRanking li {
+    display: flex;
+    /*height: 150px;*/
+}
+
+.tableRanking li:first-child {
+    background: #fff8dd;
+}
+
+.tableRanking li:first-child .rankValue {
+    color: #FF0245;
+}
+
+.tableRanking li:nth-child(1) .rankNumber span,
+.listRanking li:nth-child(1) .rankNumber span {
+    color: #D9A01E;
+}
+
+.tableRanking li:nth-child(2) .rankNumber span,
+.listRanking li:nth-child(2) .rankNumber span {
+    color: #B2A16A;
+}
+
+.tableRanking li:nth-child(3) .rankNumber span,
+.listRanking li:nth-child(3) .rankNumber span {
+    color: #D76902;
+}
+
+.tableRanking .rankScore {
+    display: flex;
+    align-items: center;
+}
+
+.tableRanking .storeName {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.tableRanking .rankText {
+    font-size: 1.7rem;
+    color: #000;
+    line-height: 1.2;
+}
+
+.tableRanking .rankValue {
+    font-size: 4.9rem;
+    color: #000;
+    font-weight: bold;
+    margin-left: 9px;
+}
+
+.tableRanking .rankContent {
+    width: 120px;
+    margin-left: -9px;
+}
+
+.tableRanking .desc {
+    /*padding-left: 15px;*/
+}
+
+.tableRanking .desc p {
+    font-size: 2.4rem;
+    color: #000;
+    line-height: 1.5;
+}
+
+.tableRanking li:first-child .desc p {
+    line-height: 2;
+}
+
+.tableRanking .desc p.longText {
+    margin-left: -6%;
+    letter-spacing: -1px;
+}
+
+
+/*.tableRanking .desc p:first-child {
+	margin-top: 18px;
+}*/
+
+.tableRanking .desc p strong {
+    color: #FF0245 !important;
+    font-weight: bold;
+    font-size: 3.1rem;
+    line-height: 1;
+}
+
+.tableRanking ul li:first-child .desc p strong {
+    font-size: 3.4rem;
+}
+
+.tableRanking .desc p span {
+    color: #FF0245 !important;
+    font-weight: bold;
+}
+
+.tableRanking .btnDetail {
+    box-sizing: border-box;
+}
+
+.tableRanking .btnDetail a {
+    width: 308px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 12.5px 0;
+    background: #F4C9C6;
+    display: inline-block;
+    border-radius: 12px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0px 4px 0px 0px rgba(128, 108, 106, 1);
+    -moz-box-shadow: 0px 4px 0px 0px rgba(128, 108, 106, 1);
+    box-shadow: 0px 4px 0px 0px rgba(128, 108, 106, 1);
+}
+
+.tableRanking li:first-child .btnDetail a {
+    padding: 26.5px 0;
+    background-color: #27CFCE;
+    -webkit-box-shadow: 0px 4px 0px 0px #126060;
+    -moz-box-shadow: 0px 4px 0px 0px #126060;
+    box-shadow: 0px 4px 0px 0px #126060;
+}
+
+.tableRanking li:first-child .btnDetail a {
+    background-color: #27CFCE;
+}
+
+.blueArrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 43px 147.5px 0 147.5px;
+    border-color: #004f80 transparent transparent transparent;
+    margin: 24px auto;
+}
+
+.blueArrowLast {
+    margin: 13px auto;
+}
+
+.top1Btn .orangeBtn span {
+    font-size: 2.475rem !important;
+}
+
+.top5Banner {
+    margin-top: 25px;
+    position: relative;
+}
+
+.top5Banner img {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.top5Banner .topNumber {
+    font-size: 7.3rem;
+    right: 15.8%;
+    bottom: 31.25%;
+    z-index: 2;
+}
+
+.top5Banner .topNumber strong {
+    font-size: 11.2rem;
+}
+
+
+/* end recommend block */
+
+
+/* start list ranking */
+
+.listRanking {
+    position: relative;
+    top: -20px;
+}
+
+.listRanking>li {
+    padding: 15px 0 0 0;
+    border: 1px solid #B6B6B6;
+    background: rgba(255, 248, 209, 0.67);
+    margin-bottom: 25px;
+}
+
+.hikakuPost .listRanking>li {
+    background: rgba(255, 248, 221, 0.67);
+}
+
+.listRanking>li:last-child {
+    margin-bottom: 0;
+}
+
+.listRanking .storeInfo {
+    display: flex;
+}
+
+.listRanking .colLeft {
+    width: 67.5%;
+}
+
+.listRanking .colRight {
+    width: 32.5%;
+}
+
+.listRanking .storeInfomation {
+    padding: 18px 0 18px 140px;
+    background: url(images/rankingBg.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 25px;
+    background-size: contain;
+    background-position: left center;
+}
+
+.storeInfomation .storeDesc {
+    font-size: 1.559rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.storeInfomation .storeName {
+    font-size: 3.275rem;
+    color: #fff;
+    font-weight: 900;
+    margin-top: 7px;
+}
+
+.storeInfomation .storeName br {
+    display: none;
+}
+
+.listRanking .rankNumber {
+    width: 124px;
+    height: 140px;
+    position: absolute;
+    left: 8px;
+    top: -40px;
+}
+
+.listRanking .rankNumberWrapper {
+    position: relative;
+}
+
+.listRanking .rankNumberWrapper img {
+    width: 100%;
+}
+
+.listRanking .rankNumber span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5.4rem;
+    color: #939393;
+    font-weight: bold;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.listRanking .storePoint {
+    width: 122.6px;
+    height: 122.6px;
+    border-radius: 50%;
+    background: #ff5374;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 23px;
+}
+
+.listRanking .storePoint .text {
+    font-size: 1.752rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.listRanking .storePoint .point {
+    font-size: 4.2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.listRanking .storePoint .point small {
+    font-size: 3.3rem;
+    font-style: normal;
+    margin-left: 3px;
+}
+
+.listRanking .storeContent {
+    margin-top: 17px;
+    padding: 0 17px 35px 17px;
+}
+
+.storeMainImg {
+    padding: 0 16px;
+}
+
+.storeMainImg img {
+    width: 100%;
+}
+
+.listRanking .starRating {
+    margin-top: 34px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.storeContent .starRatingWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.starRatingWrapper .ratingText {
+    width: 27%;
+    text-align: center;
+    position: relative;
+}
+
+.starRatingWrapper .ratingText span {
+    position: relative;
+    z-index: 2;
+    font-size: 2.3rem;
+    color: #333333;
+    font-weight: 900;
+}
+
+.starRatingWrapper .rating-holder {
+    width: 54%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: -3px;
+}
+
+.starRatingWrapper .ratingPoint {
+    width: 19%;
+    font-size: 3.038rem;
+    color: #333333;
+    padding-left: 22px;
+    box-sizing: border-box;
+}
+
+.starRatingWrapper .ratingPoint small {
+    font-size: 2rem;
+}
+
+.storeContent .c-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.storeContent .c-rating span {
+    margin-right: 0;
+}
+
+.storeContent .c-rating span:last-child {
+    margin-right: 0;
+}
+
+.boxTitle {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ff5374;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.boxTitle span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.boxTitle img {
+    width: 100%;
+}
+
+.boxTitle.boxTitleNormal {
+    font-weight: normal;
+    margin-top: 27px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.priceBox {
+    margin: 8px 0 20px 0;
+    padding: 0 18px;
+}
+
+.priceBox .priceBoxHeader {
+    display: flex;
+}
+
+.priceBoxTitle {
+    width: 33.33%;
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff5374;
+    border: 1px solid #FFFFFF;
+    border-bottom: none;
+}
+
+.priceBoxBody {
+    display: flex;
+}
+
+.priceBoxContent {
+    padding: 19px 0 15px 0;
+    background: #fff;
+    border: 1px solid #4A3D27;
+    border-top: none;
+    width: 33.33%;
+}
+
+.priceBoxIcon {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.priceBoxValue {
+    text-align: center;
+    color: #ff5374;
+    font-weight: bold;
+    padding: 13px 0 17px 0;
+}
+
+.priceBoxValue span {
+    font-size: 3.2rem;
+}
+
+.priceBoxValue small {
+    font-size: 2.1rem;
+}
+
+.priceBoxNote {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.campaignBox {
+    border-radius: 25px;
+    padding: 5px 15px 20px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.campaignBoxContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.campaignItem {
+    width: 50%;
+    margin-top: 24px;
+}
+
+.campaignFullItem {
+    width: 100%;
+}
+
+.campaignTitle {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: bold;
+    color: #ff5374;
+}
+
+.campaignDesc p {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-top: 8px;
+}
+
+.campaignDesc p strong {
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+.campaignDesc p em {
+    font-weight: normal;
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+.campaignImg {
+    text-align: center;
+    margin-top: 13px;
+}
+
+.campaignImg img {
+    width: 149px;
+}
+
+.listRanking .rankingStoreInfo .orangeBtn span {
+    font-size: 2.475rem !important;
+}
+
+.listRanking .top1BtnStoreInfo .orangeBtn span {
+    font-size: 2.475rem !important;
+}
+
+.listRanking .reviewBlock {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.listRanking .greenBtn {
+    margin: 10px 0 30px 0 !important;
+}
+
+.recTop1 {
+    margin-top: 25px;
+}
+
+.recTop1 .recTop1Img {
+    padding: 0 40px 3px 40px;
+}
+
+.recTop1 .recTop1Img img {
+    width: 100%;
+}
+
+.recTop1 .top1BtnStoreInfo .maxbutton.maxbutton-orangebtn.orangeBtn {
+    margin-top: 15px !important;
+}
+
+
+/* end list ranking */
+
+
+/* start column page */
+
+.cardtype {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.cardtype__article {
+    width: 48%;
+    padding: 7px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .12), 0 2px 3px 0 rgba(0, 0, 0, .22);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    transition: .2s;
+}
+
+.cardtype__article:hover {
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .15), 0 0 5px rgba(0, 0, 0, .1);
+    transform: translateY(-4px);
+}
+
+.cardtype__article h2 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.cardtype time {
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #b5b5b5;
+    font-weight: 700;
+}
+
+.cardtype__article::after {
+    flex-basis: 48%;
+    content: "";
+}
+
+.cardtype__img {
+    max-height: 180px;
+}
+
+.cardtype__img img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.pagination,
+.wp-prev-next {
+    margin: 1.5em 0;
+}
+
+.pagination {
+    text-align: left;
+}
+
+.pagination ul {
+    display: block;
+    clear: both;
+    padding: 1.5em 0 0;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.pagination li {
+    display: inline-block;
+    overflow: hidden;
+    margin: 3.5px;
+    padding: 0;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    margin: 0;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 17.5px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 46px;
+}
+
+.pagination .current {
+    color: #fff;
+    cursor: default;
+}
+
+.page-numbers.dots {
+    width: auto;
+    padding: 0;
+    background: 0 0;
+}
+
+.wp-prev-next .prev-link {
+    float: left;
+}
+
+.wp-prev-next .next-link {
+    float: right;
+}
+
+.pagination a,
+.pagination span {
+    color: #ea527a;
+}
+
+.pagination .current {
+    background-color: #ea527a;
+}
+
+.pagination a:hover {
+    background: #ea527a;
+    color: #fff;
+}
+
+.prev.page-numbers,
+.next.page-numbers {
+    width: 15px;
+    background: 0 0;
+    position: relative;
+}
+
+.next.page-numbers:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 18px;
+    background: url(images/next-arrow.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.prev.page-numbers:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 18px;
+    background: url(images/prev-arrow.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.prev.page-numbers:hover,
+.next.page-numbers:hover {
+    background: transparent!important;
+    opacity: .7;
+}
+
+
+/* end column page */
+
+.collapsible {
+    text-align: center;
+    margin-top: 10px;
+    color: #888;
+    font-size: 1.3rem;
+}
+
+.collapsible span {
+    position: relative;
+}
+
+.collapsible span:after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    background-image: url('images/down-arrow.svg');
+    width: 10px;
+    height: 10px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.collapsible.active span:after {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.tRanking {
+    width: 100%;
+    text-align: center;
+}
+
+.tRanking td {
+    border: 1px solid #000;
+}
+
+.tRanking .tHead {
+    background: #ff5374;
+    padding: 10px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.tRanking .tHead td {
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.tRanking .rankNumber {
+    width: 113px;
+    height: 129px;
+    position: relative;
+    left: -6px;
+}
+
+.tRanking .rankNumber span {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 4.2rem;
+    color: #939393;
+    font-weight: bold;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.tRanking .rankNumber img {
+    width: 100%;
+}
+
+.tRanking .tRank1 .rankNumber span {
+    color: #D9A01E;
+}
+
+.tRanking .tRank2 .rankNumber span {
+    color: #B2A16A;
+}
+
+.tRanking .tRank3 .rankNumber span {
+    color: #D76902;
+}
+
+.tRankWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tRankContent .i1 {
+    margin: 7px 0;
+}
+
+.tRankContent .t1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.tRankContent .t2 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.tRankContent .t3 {
+    margin-bottom: 8px;
+}
+
+.tCol3 p {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.tCol3 .maxbutton.maxbutton-orangebtn.orangeBtn {
+    padding: 0 !important;
+    width: 80% !important;
+    margin: 10px auto 12px auto !important;
+}
+
+.tCol3 .maxbutton.maxbutton-orangebtn.orangeBtn .mb-text {
+    font-size: 2rem !important;
+    min-height: 45px !important;
+}
+
+.tCol3 .orangeBtn::before {
+    display: none;
+}
+
+.tCol3 .orangeBtn span:after {
+    width: 25px;
+    height: 25px;
+}
+
+.tr1 .tRankContent .t2 {
+    color: #FF0245;
+}
+
+.tRank1 a,
+.tRank2 a,
+.tRank3 a {
+    color: #266fd3;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.rankTr1 {
+    background-color: #fffae2;
+}
+
+.advContentOsaka {
+    margin: 35px 0;
+}
+
+.wrapperContainerOsaka {
+    margin-top: 0;
+}
+
+.pc {}
+
+.sp {
+    display: none;
+}
+
+@media (max-width: 1138px) {
+    .wrapperContainer {
+        padding: 0 4px;
+        box-sizing: border-box;
+    }
+    .inner {
+        padding: 0 8px;
+    }
+    .tableRanking .desc p {
+        font-size: 1.8rem;
+    }
+    .tableRanking .rankContent {
+        margin-left: 5px;
+    }
+    .tableRanking .rankText {
+        font-size: 1.5rem;
+    }
+    .sidebarContent {
+        display: none;
+    }
+    .mainContent {
+        margin: 0 auto;
+        width: 750px;
+        box-shadow: 1px 1px 5px #888888;
+    }
+    .header {
+        width: 750px !important;
+    }
+    .customCheckbox .virContent {
+        font-size: 1rem;
+    }
+    .pc {
+        display: none !important;
+    }
+    .sp {
+        display: block !important;
+    }
+    /*hamburger*/
+    .header__img {
+        display: block
+    }
+    .header__img img {
+        top: 12.5px;
+        right: 15px;
+        position: fixed;
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        transition: all .4s ease-in-out
+    }
+    .header__open {
+        z-index: 12
+    }
+    .header__close {
+        z-index: 11;
+        opacity: 0
+    }
+    .resHeader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(165deg, #a5c0ee, #f9c5ec);
+        transition: all .4s ease-in-out;
+        transform: translateY(-100%);
+        z-index: 10000
+    }
+    .resHeader__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 80px
+    }
+    .resHeader__item {
+        width: 100%;
+        padding: 0 20px;
+        height: auto
+    }
+    .resHeader__link {
+        width: 100%;
+        display: block;
+        line-height: 1.6;
+        text-align: center;
+        padding: 15px 0;
+        color: #fff !important;
+        border-bottom: 1px solid #fff
+    }
+    .resHeader__close {
+        top: 12.5px;
+        right: 10px;
+        position: fixed;
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        transition: all .4s ease-in-out
+    }
+    .slidedown {
+        transform: translateY(0px)
+    }
+    .open {
+        opacity: 1;
+        z-index: 12
+    }
+    .close {
+        opacity: 0;
+        z-index: 11
+    }
+}
+
+@media (min-width: 768.01px) and (max-width: 900px) {
+    .topSearch {
+        width: 70%;
+    }
+    .customCheckbox .checkmark {
+        width: 10px;
+        height: 10px;
+    }
+    .pointTextDesc p {
+        font-size: 2rem;
+    }
+    .tableRanking .rankContent {
+        margin-left: 5px;
+        width: 150px;
+    }
+    .tableRanking .rankNumber span {
+        top: 35px;
+    }
+    .productRecommendContent p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: none;
+    }
+    .wrapperContainer {
+        margin-top: 0;
+        padding: 0 8px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .wrapperContainerTop {
+        padding: 0;
+    }
+    .inner {
+        padding: 0 4px;
+    }
+    .wrapper {
+        padding: 0;
+    }
+    .showSp {
+        display: block;
+    }
+    .showPc {
+        display: none;
+    }
+    .mainContent,
+    .sidebarContent {
+        width: 100%;
+        max-width: 100%;
+    }
+    .mainLogo {
+        width: 198px;
+    }
+    .headerContainer {
+        padding: 16px 0;
+        border: none;
+    }
+    .footerContainer {
+        width: 40%;
+        padding: 3% 0;
+    }
+    .footerMenuTitle {
+        position: relative;
+        padding-left: 60px;
+    }
+    .footerMenuTitle:after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-image: url('../img/heart.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .footerMenuTitle p {
+        color: #FFF;
+        font-size: 1.5rem;
+        line-height: 1.75;
+        font-weight: 500;
+    }
+    .footerContainer ul {
+        padding-left: 30px;
+        padding-top: 15px;
+    }
+    .footerContainer ul li a {
+        color: #FFF;
+        font-size: 1rem;
+        line-height: 1.75;
+        /*font-weight: 500;*/
+    }
+    /* start top banner */
+    .recommendContent img {
+        margin-left: 5px;
+    }
+    .topBanner {
+        padding: 0;
+        padding-bottom: 5px;
+        box-sizing: border-box;
+        background: url(images/bg_banner_sp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .advContent {
+        width: 375px;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        position: initial;
+        margin: 0 auto;
+        margin-top: 25px;
+        margin-bottom: 23px;
+    }
+    .advContent .advCol {
+        width: 66.66%;
+        box-sizing: border-box;
+        padding: 0;
+        left: 3px;
+        position: relative;
+    }
+    .versionContent {
+        font-size: 1.3rem;
+        top: 4px;
+        font-weight: bold;
+    }
+    p.topNumber {
+        font-size: 3.5rem;
+        bottom: 13px;
+        right: 12px;
+    }
+    p.topNumber strong {
+        font-size: 5.5rem;
+    }
+    .topSearch {
+        width: 367px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .advantages {
+        flex-wrap: wrap;
+        width: 66.8%;
+        margin: 0 auto;
+    }
+    .advantages li p span {
+        font-size: 1.9rem;
+    }
+    .advantages li:nth-child(2) p span {
+        font-size: 1.3rem;
+    }
+    .advantages li:nth-child(4) p span {
+        font-size: 1.15rem;
+    }
+    .advantages li span b {
+        font-size: 1rem;
+    }
+    .advantages li {
+        width: 76px;
+        height: 62px;
+        margin-bottom: 0;
+        border-radius: 8.74px;
+    }
+    .advantages li:first-child {
+        margin-bottom: 5px;
+    }
+    .advantages li:first-child:before {
+        display: none;
+    }
+    .advantages li p {
+        border-radius: 6.695px;
+        border: none;
+    }
+    .advantages li:nth-child(odd) p {
+        font-size: 1.1rem;
+    }
+    .advContent .version {
+        height: 29px;
+        width: 215px;
+        top: -9px;
+        left: 20px;
+    }
+    .topFiveContent {
+        margin-bottom: 5px;
+    }
+    .searchBox {
+        margin-top: 4px;
+        padding: 12px 0 10px 0;
+    }
+    .searchBox .groupSelect {
+        justify-content: space-around;
+    }
+    .searchBox .customSelect {
+        width: 32%;
+        margin: 0;
+    }
+    .customSelect {
+        height: auto;
+    }
+    .searchBox .groupCheckbox {
+        margin-top: 7px;
+        width: 331px;
+        max-width: 100%;
+        margin-left: 24px;
+    }
+    .customSelect select {
+        font-size: 1.2rem;
+        height: 27.5px;
+        font-weight: normal;
+    }
+    .customCheckbox .virContent {
+        font-size: 1.05rem;
+    }
+    .searchBox .customCheckbox {
+        width: 49% !important;
+    }
+    .customSelect::before {
+        width: 20px;
+        height: 28px;
+        top: -0.5px;
+        webkit-box-shadow: 1px 1px 0px 0px rgba(31, 86, 128, 0.42);
+        -moz-box-shadow: 1px 1px 0px 0px rgba(31, 86, 128, 0.42);
+        box-shadow: 1px 1px 0px 0px rgba(31, 86, 128, 0.42);
+    }
+    .customSelect::after {
+        right: 5px;
+        top: 10px;
+    }
+    .btnSearch button {
+        font-size: 1.65rem;
+        border-radius: 4.8115px;
+        width: 331px;
+        height: 45px;
+        max-width: 100%;
+        margin-top: 15px;
+    }
+    .btnSearch button span {
+        display: inline-block;
+        margin-left: 10px;
+    }
+    /* end top banner */
+    /* start recommend block */
+    .recommendBlock {
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 364px;
+        max-width: 100%;
+    }
+    .recommendBlock p {
+        font-size: 2.55rem;
+    }
+    .recommendBlock p span {
+        font-size: 2.05rem;
+    }
+    .recommendBlock p.recommendYellow {
+        font-size: 1.8rem;
+        height: 30px;
+        padding: 0 5px 0 13px;
+        margin-top: 10px;
+    }
+    .recommendContent img {
+        width: 35px;
+        height: 35px;
+    }
+    .tableRanking {
+        width: 375px;
+        margin-bottom: 45px;
+    }
+    .tableRanking:after {
+        bottom: -45px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 24px 81.5px 0 81.5px;
+        border-color: #ea527a transparent transparent transparent;
+    }
+    .tableRanking li {
+        padding: 0;
+        height: auto;
+    }
+    .tableRanking .colLeft {
+        padding: 0;
+        justify-content: center;
+    }
+    .tableRanking .tHead {
+        font-size: 1.35rem;
+    }
+    .tableRanking .headerLeft,
+    .tableRanking .headerRight {
+        padding: 10px 0;
+    }
+    .tableRanking .headerLeft,
+    .tableRanking .colLeft {
+        width: 36%;
+    }
+    .tableRanking .headerRight,
+    .tableRanking .colRight {
+        width: 64%;
+    }
+    .tableRanking .desc p.longText {
+        margin-left: -5%;
+        letter-spacing: 0;
+    }
+    .tableRanking .rankNumber {
+        width: 66px;
+        height: auto;
+        left: -3px;
+    }
+    .tableRanking .rankNumber span {
+        font-size: 2.468rem;
+        bottom: 5px;
+        top: 30px;
+    }
+    .tableRanking .rankContent {
+        width: 70px;
+        margin: 0;
+        margin-left: -3px;
+    }
+    .tableRanking .storeName {
+        font-size: 1.1rem;
+    }
+    .tableRanking .rankText {
+        font-size: 0.95rem;
+    }
+    .tableRanking .rankValue {
+        font-size: 2.85rem;
+        margin-left: 5px;
+    }
+    .tableRanking .desc {
+        padding-left: 0;
+    }
+    .tableRanking .desc p {
+        font-size: 1.3rem;
+    }
+    .tableRanking .desc p strong {
+        font-size: 1.65rem;
+    }
+    .tableRanking ul li:first-child .desc p strong {
+        font-size: 1.8rem;
+    }
+    .tableRanking .btnDetail a {
+        font-size: 1.25rem;
+        padding: 10px 0;
+        border-radius: 6px;
+        margin-top: 7px;
+        width: 160px;
+        webkit-box-shadow: 0px 3px 0px 0px rgba(128, 108, 106, 1);
+        -moz-box-shadow: 0px 3px 0px 0px rgba(128, 108, 106, 1);
+        box-shadow: 0px 3px 0px 0px rgba(128, 108, 106, 1);
+    }
+    .tableRanking li:first-child .btnDetail a {
+        padding: 20px 0;
+        background-color: #27CFCE;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 2px 0px 0px #126060;
+        -moz-box-shadow: 0px 2px 0px 0px #126060;
+        box-shadow: 0px 2px 0px 0px #126060;
+    }
+    .top1Btn .orangeBtn span {
+        font-size: 1.5rem !important;
+    }
+    /* end recommend block */
+    /* start list ranking */
+    .listRanking>li {
+        padding: 13px 0 15px 0;
+    }
+    .listRanking .starRating {
+        margin-top: 38px;
+        margin-bottom: 42px;
+    }
+    .listRanking .storeInfomation {
+        padding: 8px 0 8px 80px;
+        margin-top: 23px;
+    }
+    .listRanking .colLeft {
+        width: 68%;
+    }
+    .listRanking .colRight {
+        width: 32%;
+    }
+    .listRanking .rankNumber {
+        width: 74.5px;
+        height: 84.35px;
+        left: 5px;
+        top: -25px;
+    }
+    .listRanking .rankNumber span {
+        font-size: 3.15rem;
+        bottom: 7px;
+    }
+    .storeInfomation .storeDesc {
+        font-size: 1rem;
+    }
+    .storeInfomation .storeName {
+        font-size: 2rem;
+    }
+    .listRanking .storePoint {
+        width: 88px;
+        height: 88px;
+    }
+    .listRanking .storePoint .text {
+        font-size: 1.1rem;
+    }
+    .listRanking .storePoint .point {
+        font-size: 2.9rem;
+    }
+    .listRanking .storePoint .point small {
+        font-size: 2.3rem;
+    }
+    .storeMainImg {
+        padding: 0 10px;
+    }
+    .starRatingWrapper .ratingText span {
+        font-size: 1.343rem;
+    }
+    .starRatingWrapper .ratingText:before {
+        width: 28.6px;
+        height: 28.6px;
+    }
+    .storeContent .starRatingWrapper {
+        margin-top: 7px;
+    }
+    .starRatingWrapper .ratingPoint {
+        font-size: 2rem;
+        padding-left: 14px;
+        width: 22.23%;
+    }
+    .starRatingWrapper .ratingPoint small {
+        font-size: 1.5rem;
+    }
+    .starRatingWrapper .rating-holder {
+        width: 53.77%;
+        padding-left: 12px;
+        top: -2px;
+    }
+    .listRanking .c-rating span {
+        width: 28.2115px;
+        height: 27px;
+    }
+    .boxTitle {
+        font-size: 1.6rem;
+    }
+    .boxTitle.boxTitleNormal {
+        margin-top: 25px;
+    }
+    .priceBox {
+        margin: 5px 0 25px 0;
+        padding: 0 10px;
+    }
+    .priceBoxContent {
+        padding: 11px 0 5px 0;
+    }
+    .priceBoxIcon {
+        height: 33px;
+    }
+    .priceBoxTitle {
+        font-size: 1.7rem;
+    }
+    .priceBoxValue {
+        padding: 5px 12px;
+    }
+    .priceBoxValue span {
+        font-size: 1.8rem;
+    }
+    .priceBoxValue small {
+        font-size: 1.2rem;
+    }
+    .priceBoxBody .priceBoxContent:nth-child(1) img {
+        width: 33px;
+    }
+    .priceBoxBody .priceBoxContent:nth-child(2) img {
+        width: 59px;
+    }
+    .priceBoxBody .priceBoxContent:nth-child(3) img {
+        width: 31px;
+    }
+    .priceBoxNote {
+        font-size: 1.25rem;
+    }
+    .campaignBox {
+        padding: 5px 15px 13px 15px;
+        margin-bottom: 16px;
+    }
+    .campaignItem {
+        margin-top: 12px;
+    }
+    .campaignTitle {
+        font-size: 2.15rem;
+    }
+    .campaignDesc p {
+        font-size: 1.2rem;
+    }
+    .campaignDesc p strong {
+        font-size: 1.75rem;
+    }
+    .campaignImg img {
+        width: 90.5px;
+    }
+    .listRanking .rankingStoreInfo .orangeBtn span {
+        font-size: 1.444rem !important;
+    }
+    .listRanking .top1BtnStoreInfo .maxbutton.maxbutton-orangebtn.orangeBtn {
+        margin-bottom: 0 !important;
+        margin-top: 10px !important;
+    }
+    .listRanking .top1BtnStoreInfo .orangeBtn span {
+        font-size: 1.5rem !important;
+    }
+    .listRanking .greenBtn {
+        margin: 15px 0 5px 0 !important;
+    }
+    .listRanking .greenBtn:last-child {
+        margin: 15px 0 5px 0 !important;
+    }
+    /* end list ranking */
+    .top5Banner {
+        width: 367px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .top5Banner .topNumber {
+        font-size: 4.2rem;
+        right: 55px;
+        bottom: 53px;
+    }
+    .top5Banner .topNumber strong {
+        font-size: 6.5rem;
+    }
+    .advContentOsaka {
+        margin-top: 90px;
+        margin-bottom: 88px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardtype__article {
+        width: 100%;
+    }
+    .innerNoPaddingSp {
+        padding: 0;
+    }
+    .tRanking {
+        width: calc(100% - 10px);
+        margin: 0 auto;
+    }
+    .tRanking .tHead {
+        font-size: 1.4rem;
+    }
+    .tRanking .rankNumber {
+        width: 71px;
+        height: 64px;
+        left: 0;
+    }
+    .tRanking .rankNumber span {
+        font-size: 2.5rem;
+        top: 30px;
+    }
+    .tRank1 a,
+    .tRank2 a,
+    .tRank3 a {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+    .tRankContent .t1 {
+        font-size: 1.1rem;
+    }
+    .tRankContent .t2 {
+        font-size: 1.1rem;
+    }
+    .tCol3 p {
+        font-size: 1.3rem;
+    }
+    .tCol3 .maxbutton.maxbutton-orangebtn.orangeBtn .mb-text {
+        font-size: 1.3rem !important;
+        min-height: 35px !important;
+    }
+    .tCol3 .orangeBtn span:after {
+        width: 18px;
+        height: 18px;
+    }
+    .tRankContent .i1 {
+        width: 45px;
+    }
+}
+
+@media (max-width: 320px) {
+    .advantages li {
+        width: 50px;
+    }
+    .recommendBlock .recommendContent {
+        font-size: 1.53rem;
+    }
+    .tableRanking .rankNumber {
+        width: 40px;
+        height: 31.3155px;
+    }
+    .tableRanking .rankNumber span {
+        font-size: 1.2rem;
+        top: 19px;
+    }
+    .tableRanking .rankValue {
+        font-size: 2rem;
+    }
+    .tableRanking .desc p {
+        font-size: 1rem;
+    }
+    .boxReviews ul li.unCheck img {
+        margin-left: 1px;
+    }
+    .listRanking .top1BtnStoreInfo .orangeBtn span,
+    .top1Btn .orangeBtn span {
+        font-size: 1.4rem !important;
+    }
+    .customCheckbox .virContent {
+        font-size: 0.612rem;
+    }
+    .top5Banner .topNumber {
+        font-size: 4.2rem;
+        right: 20px;
+        bottom: 40px;
+    }
+    .advantages li {
+        width: 70px;
+    }
+    .priceBoxValue span {
+        font-size: 1.4rem;
+    }
+    .pointTextDesc p {
+        font-size: 1rem;
+    }
+    .productRecommendContent p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+}
+
+.storeImgTitle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px);
+    width: 4px
+}
+
+.storeImgTitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px);
+    width: 4px
+}

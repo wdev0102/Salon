@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="109" viewBox="0 0 149 109">
+  <g id="Group_1615" data-name="Group 1615" transform="translate(-590.203 -3630)">
+    <g id="Group_1572" data-name="Group 1572" transform="translate(4520.203 3581)">
+      <rect id="Rectangle_888" data-name="Rectangle 888" width="149" height="109" rx="22" transform="translate(-3930 49)" fill="#ea527b"/>
+    </g>
+    <g id="Group_1578" data-name="Group 1578" transform="translate(577.701 3602.047)">
+      <path id="Path_16995" data-name="Path 16995" d="M167.966,375.806l-4.3-4.767c-2.086,0-4.177,3.853-5.474,2.4l7.375,7.373Z" transform="translate(-94.386 -272.637)" fill="#7e9734"/>
+      <g id="Group_1577" data-name="Group 1577" transform="translate(51.996 51.396)">
+        <path id="Path_16996" data-name="Path 16996" d="M181.38,379.852c.462,5.646-9.028,18.287-9.028,18.287-2.046,2.721-1.378,3.437,1.483,1.59l25.346-16.383" transform="translate(-164.969 -327.155)" fill="#fff"/>
+        <g id="Group_1576" data-name="Group 1576" transform="translate(0 0)">
+          <path id="Path_16997" data-name="Path 16997" d="M223.665,222.565a11.173,11.173,0,0,1-11.14,11.14H158.308a11.173,11.173,0,0,1-11.142-11.14V186.913a11.173,11.173,0,0,1,11.142-11.14h54.218a11.173,11.173,0,0,1,11.14,11.14Z" transform="translate(-147.166 -175.773)" fill="#fff"/>
+          <g id="Group_1575" data-name="Group 1575" transform="translate(14.789 25.392)">
+            <path id="Path_16998" data-name="Path 16998" d="M211.586,277.682a3.574,3.574,0,1,1-3.571-3.573A3.571,3.571,0,0,1,211.586,277.682Z" transform="translate(-204.439 -274.109)" fill="#30aeb9"/>
+            <path id="Path_16999" data-name="Path 16999" d="M288.606,277.682a3.572,3.572,0,1,1-3.571-3.573A3.57,3.57,0,0,1,288.606,277.682Z" transform="translate(-261.574 -274.109)" fill="#30aeb9"/>
+            <path id="Path_17000" data-name="Path 17000" d="M365.616,277.682a3.573,3.573,0,1,1-3.571-3.573A3.571,3.571,0,0,1,365.616,277.682Z" transform="translate(-318.697 -274.109)" fill="#30aeb9"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

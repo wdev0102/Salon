@@ -1,0 +1,1787 @@
+$color1: #0f8bd2
+$color2: #ff7676
+$color3: #ff6e96
+
+body
+  background: url(../img/bg.png)
+
+.header
+  width: 860px
+  height: 60px
+  position: fixed
+  top: 0
+  left: 50%
+  background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+  display: flex
+  justify-content: center
+  z-index: 10
+  transform: translateX(-50%) translateY(0%)
+  box-shadow: 1px 1px 10px #a5c0ee, -1px -1px 10px #f9c5ec
+  transition: all .4s ease-in-out
+
+  &--unpinned
+    transform: translateX(-50%) translateY(-150%)
+
+  &__inner
+    width: 100%
+    max-width: 1200px
+    height: 100%
+    display: flex
+
+  &__list
+    display: flex
+    height: 100%
+    width: 100%
+    justify-content: space-evenly
+
+  &__item
+    height: 100%
+    display: flex
+
+    &:last-child
+      margin-right: 0px
+
+  &__link
+    font-size: 16px
+    height: 100%
+    line-height: 60px
+    color: #fff
+    transition: all 0.3s ease-in-out
+    padding: 0 20px
+
+    &:hover
+      background: #fff
+      color: #ff5374
+
+  &__img
+    display: none
+
+.resHeader
+  display: none
+
+.fv
+  width: 100%
+
+  &__img
+    width: 860px
+    height: auto
+    margin: 0 auto
+
+    picture
+      width: 100%
+      height: 100%
+
+      source
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        margin-top: 60px
+
+.filter
+  width: 100%
+  margin-top: -2px
+
+  &__head
+    width: 860px
+    background: #262626
+    cursor: pointer
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    position: relative
+    z-index: 2
+
+    p
+      font-size: 14px
+      color: #fff
+      text-align: center
+      padding: 20px
+      letter-spacing: .05em
+      display: inline-block
+      position: relative
+
+      &::before
+        content: ""
+        position: absolute
+        top: 50%
+        right: -20px
+        transform: translateY(-55%)
+        background: url("../img/search.svg")
+        background-size: cover
+        width: 20px
+        height: 20px
+
+  &__wrapper
+    width: 860px
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    display: none
+    flex-direction: column
+    border-radius: 5px
+    padding: 5% 12.5%
+    position: relative
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    box-shadow: 1px 1px 10px #a5c0ee, -1px -1px 10px #f9c5ec
+
+  &__body
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__left
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+    select
+      padding: 10px
+      border: 3px solid #fff
+      border-radius: 5px
+      font-size: 16px
+      background: transparent
+      width: 100%
+      letter-spacing: .1em
+
+  &__content
+    margin-top: 30px
+
+    &:nth-child(1)
+      width: 100%
+
+    &:nth-child(2), &:nth-child(3)
+      width: 50%
+
+    label
+      display: block
+      margin-top: 5px
+
+    &.--space
+      margin-bottom: 30px
+
+  &__ttl
+    font-size: 20px
+    font-weight: normal
+    color: #fff
+    background: #262626
+    padding: 5px
+    margin-bottom: 10px
+    display: inline-block
+    letter-spacing: 0.15em
+
+  &__right
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+    button
+      width: 100%
+      margin-top: auto
+      padding: 20px
+      background: #ff7676
+      color: #fff
+      font-size: 16px
+      font-weight: bold
+      border-radius: 3px
+      letter-spacing: 0.1em
+      transition: all .3s ease-in-out
+
+      &:hover
+        opacity: 0.6
+
+    .filter__content:nth-child(1), .filter__content:nth-child(2)
+      width: 50%
+
+.comparison
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__ttl
+    width: 860px
+    text-align: center
+    margin: 0 auto
+
+    img
+      height: 80px
+
+    // &:before
+    //   content: ""
+    //   position: absolute
+    //   top: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: translateX(-50%)
+    //   max-width: 900px
+    //   max-height: 50px
+    //
+    // &:after
+    //   content: ""
+    //   position: absolute
+    //   bottom: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: rotate(180deg) translateX(50%)
+    //   max-width: 900px
+    //   max-height: 50px
+
+
+.table
+  width: 860px
+  max-width: 1200px
+  margin: 0 auto
+
+  &__head
+
+  &__body
+    display: flex
+    width: 100%
+    padding: 0 30px
+
+  &__list
+    display: flex
+    flex-direction: column
+    width: calc(100% / 3)
+    border-bottom: 2px solid rgba(174,150,207,.9)
+
+    &:last-child
+      border-right: 2px solid rgba(174,150,207,.9)
+
+  &__sentence
+    padding-bottom: 10px
+    font-size: 16px
+    letter-spacing: 0.05em
+    color: #262626
+    font-weight: bold
+
+
+  &__ttl
+    width: 25%
+    padding: 10px 0
+    color: #fff
+    letter-spacing: 0.1em
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    border: 2px solid rgb(174,150,207)
+
+
+  &__box
+    padding: 15px 5px
+    vertical-align: middle
+    text-align: center
+    border-top: 2px solid rgba(174,150,207,.9)
+    border-left: 2px solid rgba(174,150,207,.9)
+    position: relative
+
+    img
+      width: 50px
+      height: 50px
+      margin-bottom: 5px
+
+    &.--main
+      padding: 30px 5px
+
+      img
+        width: 120px
+        height: 60px
+
+  &__list
+    &:nth-child(1) .--main
+      &:after
+        content: ""
+        position: absolute
+        top: 2%
+        left: 10%
+        display: block
+        width: 60px
+        height: 60px
+        background: url("../img/crown01.svg")
+        background-position: center center
+        background-size: contain
+
+    &:nth-child(2) .--main
+      &:after
+        content: ""
+        position: absolute
+        top: 2%
+        left: 10%
+        display: block
+        width: 60px
+        height: 60px
+        background: url("../img/crown02.svg")
+        background-position: center center
+        background-size: contain
+
+    &:nth-child(3) .--main
+      &:after
+        content: ""
+        position: absolute
+        top: 2%
+        left: 10%
+        display: block
+        width: 60px
+        height: 60px
+        background: url("../img/crown03.svg")
+        background-position: center center
+        background-size: contain
+
+  &__desc
+    font-size: 14px
+    line-height: 1.4
+
+    strong
+      color: #ff5374
+      font-size: 16px
+      line-height: 2
+
+  &__link
+    display: block
+    transition: all .2s ease-in-out
+
+    &:hover
+      opacity: 0.6
+      transform: scale(1.05)
+
+    p
+      letter-spacing: 0.05em
+      font-size: 16px
+      color: #ff5374
+      font-weight: bold
+      margin-top: 10px
+
+.cv__btn
+  position: relative
+  overflow: hidden
+  margin: 0 auto
+  padding-top: 40px
+  max-width: 1200px
+
+  &.--center
+    display: flex
+    justify-content: center
+
+  &:before
+    content: ""
+    position: absolute
+    top: -180px
+    left: 0
+    width: 30px
+    height: 100%
+    display: inline-block
+    background: #fff
+    animation: shiny-btn1 3s ease-in-out infinite
+
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    height: 10px
+    top: 40%
+    transform: rotate(45deg)
+    width: 10px
+
+  a
+    box-shadow: 1px 1px 3px 0px #cfcfcf
+    border: 3px solid #f00
+    border-radius: 5px
+    background: linear-gradient(to bottom, #ff6666 0%, #ff0000 100%)
+    color: #fff
+    display: block
+    font-size: 22px
+    font-weight: normal
+    line-height: 1.4
+    padding: 1.2rem 2rem
+    text-align: center
+    width: 800px
+
+@keyframes shiny-btn1
+  0%
+    transform: scale(0) rotate(45deg)
+    opacity: 0
+  80%
+    -webkit-transform: scale(0) rotate(45deg)
+    opacity: 0.5
+  81%
+    -webkit-transform: scale(4) rotate(45deg)
+    opacity: 1
+  100%
+    -webkit-transform: scale(50) rotate(45deg)
+    opacity: 0
+
+.point
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__ttl
+    width: 860px
+    text-align: center
+    margin: 0 auto
+
+    img
+      height: 60px
+
+    // &:before
+    //   content: ""
+    //   position: absolute
+    //   top: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: translateX(-50%)
+    //   max-width: 900px
+    //   max-height: 50px
+    //
+    // &:after
+    //   content: ""
+    //   position: absolute
+    //   bottom: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: rotate(180deg) translateX(50%)
+    //   max-width: 900px
+    //   max-height: 50px
+
+  &__box
+    width: 860px
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+  &__content
+    width: 32%
+    display: flex
+    flex-direction: column
+
+  &__txtBox
+    display: flex
+    width: 100%
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    align-items: center
+    padding: 10px
+    border-radius: 5px
+
+    img
+      width: auto
+      height: calc(40 / 1366 * 100vw)
+
+    h3
+      font-size: calc(18 / 1366 * 100vw)
+      color: #fff
+      margin-top: 10px
+      margin-left: 15px
+      letter-spacing: 0.1em
+
+  &__desc
+    margin-top: 20px
+    font-size: 16px
+    line-height: 1.6
+    letter-spacing: 0.05em
+
+.voice
+  width: 100%
+  display: flex
+  justify-content: center
+
+  &__wrap
+    width: 100%
+    padding-top: 40px
+
+  &__ttl
+    width: 100%
+    text-align: center
+    margin-bottom: 50px
+
+    img
+      width: 60%
+      max-width: 500px
+
+  &__content
+    display: flex
+    flex-direction: column
+
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 30px
+
+  &__img
+    width: 150px
+    height: 150px
+    margin-right: 30px
+
+    img
+      width: 100%
+      height: 100%
+
+  &__txtBox
+    display: flex
+    flex-direction: column
+    width: calc(100% - 180px)
+
+  &__txt
+    font-size: 18px
+    letter-spacing: 0.1em
+    font-weight: bold
+    color: #ff5374
+
+  &__category
+    font-size: 16px
+    letter-spacing: .05em
+    margin-top: 10px
+    color: #ff5374
+
+  &__desc
+    font-size: 14px
+    line-height: 1.4
+    letter-spacing: .05em
+    color: #555
+    margin-top: 15px
+
+
+.ranking
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__ttl
+    margin: 0 auto
+    width: 860px
+    text-align: center
+
+    img
+      height: 80px
+
+
+    // &:before
+    //   content: ""
+    //   position: absolute
+    //   top: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: translateX(-50%)
+    //   max-width: 900px
+    //   max-height: 50px
+    //
+    // &:after
+    //   content: ""
+    //   position: absolute
+    //   bottom: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: rotate(180deg) translateX(50%)
+    //   max-width: 900px
+    //   max-height: 50px
+
+  &__content
+    width: 860px
+    max-width: 1200px
+    margin: 0 auto
+
+    &:nth-child(2) .ranking__name:before
+      content: ""
+      width: 70px
+      height: 70px
+      background: url("../img/crown01.svg")
+      background-repeat: no-repeat
+      position: absolute
+      bottom: 10px
+      left: 0
+      display: block
+    &:nth-child(3) .ranking__name:before
+      content: ""
+      width: 70px
+      height: 70px
+      background: url("../img/crown02.svg")
+      background-repeat: no-repeat
+      position: absolute
+      bottom: 10px
+      left: 0
+      display: block
+    &:nth-child(4) .ranking__name:before
+      content: ""
+      width: 70px
+      height: 70px
+      background: url("../img/crown03.svg")
+      background-repeat: no-repeat
+      position: absolute
+      bottom: 10px
+      left: 0
+      display: block
+
+  &__name
+    font-size: 32px
+    border-bottom: 3px solid
+    border-image: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    border-image-slice: 1
+    padding-bottom: 10px
+    padding-left: 90px
+    letter-spacing: 0.1em
+    position: relative
+    color: #262626
+
+  &__head
+    margin-top: 20px
+    display: flex
+
+    img
+      width: 100%
+      height: 100%
+
+  &__desc
+    margin-left: 20px
+    font-size: 16px
+    line-height: 1.6
+    letter-spacing: 0.1em
+
+    span
+      color: #ff5374
+      font-size: 18px
+      font-weight: bold
+
+  &__txt
+    width: 100%
+    color: #fff
+    padding: 15px 0 15px 10px
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    // background: linear-gradient(165deg, #7391d9, #ee96cd)
+    border-radius: 3px
+    margin-top: 20px
+    font-size: 20px
+    letter-spacing: 0.05em
+
+  &__menu
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__item
+    width: 48%
+    margin-top: 20px
+    border: 2px solid #ff5374
+    border-radius: 3px
+
+    h4
+      font-size: 16px
+      line-height: 1.6
+      text-align: center
+      padding: 10px 10px
+      background: #ff5374
+      color: #fff
+      letter-spacing: 0.1em
+
+    p
+      font-size: 14px
+      line-height: 1.6
+      padding: 15px 20px
+
+  &__imgBox
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+
+    img
+      width: 45%
+
+
+  &__details
+    width: 100%
+    margin-top: 20px
+    display: flex
+    flex-direction: column
+
+  &__ta
+    width: 100%
+
+  &__tb
+    width: 100%
+
+  &__tr
+
+    &.--theme
+      color: #fff
+
+    &.--body
+
+      & .ranking__th
+        background: #fff
+
+  &__th
+    width: calc(100% / 3)
+    padding: 10px 0
+    letter-spacing: 0.05em
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+
+
+  &__listBox
+    width: 100%
+    display: flex
+    flex-direction: column
+
+  &__list
+    width: 100%
+    display: flex
+
+    p
+      width: 20%
+      text-align: center
+      color: #fff
+      padding: 10px 0
+      background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+      line-height: 1.8
+
+
+    ul
+      width: 80%
+      display: flex
+      padding: 10px
+
+      li
+        font-size: 13px
+        padding: 7px 10px
+        margin-right: 5px
+        background: #909090
+        border-radius: 3px
+        color: #fff
+
+      li.true
+        background: #ff5374
+
+.shop__ttl
+  font-size: 22px
+  text-align: center
+  margin: 40px 0 30px
+  font-weight: bold
+  position: relative
+  padding-bottom: 20px
+
+  &:after
+    background: repeating-linear-gradient(-45deg, #ff6e96, #ff6e96 3px, #FFEEF7 3px, #FFEEF7 6px)
+    bottom: 0
+    content: ""
+    height: 4px
+    left: 0
+    position: absolute
+    width: 100%
+
+.m-salon .block-ranking-name
+  margin-left: 0
+
+.block-ranking-salonimg
+  margin-bottom: 1rem
+.block-ranking-salonimg img
+  width: 100%
+  height: auto
+
+.block-title-salon
+  border-radius: 3px
+  color: #ff6e96
+  font-size: 18px
+  font-weight: normal
+  margin: 3rem 0 2rem
+  padding-bottom: 1.3rem
+  position: relative
+  text-align: center
+.block-title-salon::after
+  background: repeating-linear-gradient(-45deg, #ff6e96, #ff6e96 3px, #FFEEF7 3px, #FFEEF7 6px)
+  bottom: 0
+  content: ""
+  height: 4px
+  left: 0
+  position: absolute
+  width: 100%
+
+.block-salon-list
+  border: 1px solid #ff6e96
+  margin-bottom: 10px
+.block-salon-list p
+  margin-bottom: 0 !important
+.block-salon-area
+  font-size: 20px
+
+.block-salon-list .block-salon-area
+  background: #ff6e96
+  color: #fff
+  cursor: pointer
+  font-weight: normal
+  padding: .5rem 1rem
+  position: relative
+.block-salon-list .block-salon-area::after
+  border-top: solid 3px #fff
+  border-right: solid 3px #fff
+  -webkit-transform: rotate(45deg)
+  content: ""
+  display: block
+  height: 10px
+  position: absolute
+  right: 2rem
+  top: 28%
+  transform: rotate(135deg)
+  width: 10px
+.block-salon-list .block-salon-pref
+  background: #FFEEF7
+  border-top: 1px solid #ff6e96
+  cursor: pointer
+  font-size: 16px
+  font-weight: normal
+  padding: .5rem 1rem
+  position: relative
+.block-salon-list .block-salon-pref::after
+  border-top: solid 3px #ff6e96
+  border-right: solid 3px #ff6e96
+  -webkit-transform: rotate(45deg)
+  content: ""
+  display: block
+  height: 10px
+  position: absolute
+  right: 2rem
+  top: 28%
+  transform: rotate(135deg)
+  width: 10px
+.block-salon-list .block-salon-detail
+  border-top: 1px solid #ff6e96
+  cursor: pointer
+  font-size: 16px
+  font-weight: normal
+  padding: .5rem 1.5rem
+  position: relative
+.block-salon-list .block-salon-detail::after
+  border-top: solid 3px #ff6e96
+  border-right: solid 3px #ff6e96
+  -webkit-transform: rotate(45deg)
+  content: ""
+  display: block
+  height: 10px
+  position: absolute
+  right: 2rem
+  top: 28%
+  transform: rotate(135deg)
+  width: 10px
+.block-salon-list ul
+  display: none
+  list-style: none
+.block-salon-list .block-salon-muni
+  display: none
+.block-salon-list .open
+  display: block
+
+.block-salon-info
+  border-top: 1px dotted #ff6e96
+  display: none
+  padding: 1rem
+.block-salon-info dt
+  border: 1px solid #ff6e96
+  border-radius: 3px
+  color: #ff6e96
+  display: inline-block
+  font-size: 16px
+  margin-bottom: .5rem
+  padding: 5px 10px
+.block-salon-info dd
+  font-size: 14px
+  margin-bottom: 1rem
+  line-height: 1.6
+.block-salon-info .block-salon-map
+  height: 0
+  overflow: hidden
+  margin-bottom: 1rem
+  padding-bottom: 56.25%
+  position: relative
+
+.block-salon-info .cv-btn
+  margin: .5rem auto
+  text-align: center
+  width: 50%
+.block-salon-info .cv-btn a
+  color: #fff
+  background: #ff6e96
+  border-radius: 4px
+  font-size: 16px
+  display: block
+  font-weight: normal
+  padding: 15px
+  text-decoration: none
+
+.list
+  width: 100%
+  display: flex
+  flex-direction: column
+
+  &__ttl
+    width: 860px
+    text-align: center
+    margin: 0 auto
+
+    img
+      height: 60px
+
+    // &:before
+    //   content: ""
+    //   position: absolute
+    //   top: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: translateX(-50%)
+    //   max-width: 900px
+    //   max-height: 50px
+    //
+    //
+    // &:after
+    //   content: ""
+    //   position: absolute
+    //   bottom: -55%
+    //   left: 50%
+    //   width: 56.25vw
+    //   height: 3vw
+    //   background: url("../img/top-border.svg")
+    //   transform: rotate(180deg) translateX(50%)
+    //   max-width: 900px
+    //   max-height: 50px
+
+  &__box
+    width: 860px
+    max-width: 1200px
+    display: flex
+    justify-content: space-between
+    margin: 0 auto
+
+  &__content
+    width: 30%
+    cursor: pointer
+    transition: all .3s ease-in-out
+
+    &:hover
+      opacity: 0.6
+
+    img
+      width: 100%
+
+  &__txt
+    display: inline-block
+    font-size: 16px
+    color: $color1
+    padding-bottom: 5px
+    border-bottom: 2px solid $color1
+    margin: 10px 0
+
+  &__desc
+    font-size: 14px
+    color: #707070
+    line-height: 1.6
+
+footer
+  width: 100%
+  height: 40px
+  background: #ff5374
+  margin-top: 120px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  p
+    font-size: 12px
+    letter-spacing: 0.1em
+    color: #fff
+
+.research
+  display: flex
+  flex-direction: column
+  width: 860px
+  max-width: 1200px
+  margin: 0 auto
+  margin-top: 30px
+  padding-top: 30px
+  border-top: dotted 2px #909090
+
+  &__ttl
+    font-size: 14px
+    color: #909090
+    letter-spacing: 0.1em
+
+  &__desc
+    font-size: 12px
+    line-height: 1.8
+    color: #909090
+    margin-top: 10px
+
+.privacy
+  width: 100%
+  display: flex
+  justify-content: center
+
+  &__wrap
+    width: 860px
+    max-width: 1200px
+    padding: 100px 0
+
+    h1
+      font-size: 26px
+      letter-spacing: 0.1em
+      text-align: center
+      margin-bottom: 60px
+
+    h2
+      font-size: 22px
+      letter-spacing: 0.1em
+      margin-bottom: 20px
+      padding: 5px 10px
+      position: relative
+      line-height: 1.6
+
+      &:before
+        content: ""
+        position: absolute
+        height: 100%
+        width: 4px
+        background-color: #ff5374
+        left: 0
+        top: 0
+
+    p
+      font-size: 16px
+      letter-spacing: 0.05em
+      line-height: 1.8
+      margin-bottom: 30px
+
+  &__linkBox
+    display: flex
+    margin-top: 60px
+    justify-content: center
+
+    a
+      color: #707070
+      font-size: 18px
+      padding: 5px 20px
+      margin: 0 30px
+      position: relative
+      transition: all 0.2s ease-in-out
+      margin-left: -20px
+
+      &:before
+        content: ""
+        position: absolute
+        width: 13px
+        height: 13px
+        border-top: 3px solid #ff5374
+        border-right: 3px solid #ff5374
+        transform: rotate(45deg) translateY(-50%)
+        top: 50%
+        right: 0%
+        transition: all 0.2s ease-in-out
+
+      &:hover
+        color: #000
+        transform: scale(1.1)
+
+.companyProfile
+  background: #fff
+  width: 100%
+  padding: 100px 0
+
+  &__wrap
+    width: 860px
+    margin: 0 auto
+    max-width: 1200px
+    position: relative
+    padding: 4% 10% 6% 10%
+    background: #fff
+    margin-bottom: 5%
+    border: 2px solid #ff5374
+
+    &::before
+      content: ""
+      width: 100%
+      height: 100px
+      position: absolute
+      top: -100px
+      left: 0
+      background: #fff
+      display: none
+
+    h2
+      font-size: 3vw
+      letter-spacing: 2px
+      color: #ff5374
+      font-weight: normal
+      background: #fff
+      margin-bottom: 5%
+      padding-left: 1%
+      font-family: serif
+
+    table
+      width: 100%
+      background: #fff
+
+      tbody
+        tr
+          display: flex
+          font-size: 18px
+          line-height: 1.6
+          padding: 15px 20px
+          width: 100%
+          border-bottom: 1px solid #ff5374
+
+          th
+            width: 20%
+            text-align: left
+
+          td
+            width: 80%
+
+.column
+  width: 100%
+
+.cv__btn
+  width: 860px
+
+.table, .point__box, .ranking__content, .list__box, .fv__img, .news__wrap
+  padding: 0px 30px
+  position: relative
+
+  // &::after
+  //   content: ""
+  //   position: absolute
+  //   top: 0
+  //   left: 0
+  //   height: 100%
+  //   background: repeating-linear-gradient(45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px)
+  //   width: 4px
+  //
+  // &::before
+  //   content: ""
+  //   position: absolute
+  //   top: 0
+  //   right: 0
+  //   height: 100%
+  //   background: repeating-linear-gradient(-45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px)
+  //   width: 4px
+
+.fv__img
+  padding: 0px
+
+.news
+  width: 100%
+  display: flex
+  justify-content: center
+
+  &__wrap
+    width: 860px
+    padding-top: 30px
+
+  &__ttlBox
+    margin-bottom: 60px
+    text-align: center
+
+    img
+      height: 60px
+
+  &__cardBox
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+  &__item
+    width: 32%
+    display: flex
+    flex-direction: column
+    box-shadow: 0 0 6px 2px #ddd
+    transition: all .3s ease-in-out
+
+    &:hover
+      box-shadow: 0 0 12px 4px #aaa
+
+  &__thumbnail
+    width: 100%
+
+    img
+      width: 100%
+      height: auto
+
+  &__txtBox
+    padding: 10px 15px 20px 15px
+
+  &__category
+    font-size: 12px
+    color: #ff5374
+    font-weight: bold
+    margin-bottom: 10px
+
+  &__ttl
+    font-size: 14px
+    letter-spacing: .05em
+    color: #262626
+    line-height: 1.6
+
+  &__desc
+    font-size: 14px
+    line-height: 1.4
+
+.--sideLine
+  width: 860px
+  margin: 0 auto
+
+
+.fv__img, .filter__head, .filter__wrapper, .comparison__ttl, .table__body, .ranking__ttl, .ranking__content, .list__ttl, .list__box, .point__ttl, .point__box, .news__wrap, .--sideLine
+  position: relative
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    background: repeating-linear-gradient(45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px)
+    width: 4px
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    background: repeating-linear-gradient(-45deg, #a5c0ee, #a5c0ee 3px, #f9c5ec 3px, #f9c5ec 6px)
+    width: 4px
+
+.comparison__ttl
+  padding: 30px 0
+
+.ranking__ttl
+  padding-top: 60px
+
+.ranking__content
+  padding-top: 80px
+
+.list__ttl
+  padding: 60px 0
+
+.point__ttl
+  padding: 60px 0
+
+.point__box
+  padding-bottom: 60px
+
+
+@media(max-width:1300px)
+  .filter__wrapper, .table, .point__box, .ranking__content, .list__box, .fv__img
+    width: 860px
+
+  .comparison__ttl, .point__ttl, .ranking__ttl, .list__ttl
+
+  .cv__btn
+    width: 860px
+
+@media(max-width:768px)
+
+  .fv__img, .filter__head, .filter__wrapper, .comparison__ttl, .table__body, .ranking__ttl, .ranking__content, .list__ttl, .list__box, .point__ttl, .point__box, .news__wrap, .--sideLine
+
+    &::after
+      display: none
+
+    &::before
+      display: none
+
+  .header
+    width: 100vw
+    height: 60px
+
+    &__inner
+      display: none
+
+    &__img
+      display: block
+
+      img
+        top: 12.5px
+        right: 10px
+        position: fixed
+        width: 35px
+        height: 35px
+        object-fit: contain
+        transition: all .4s ease-in-out
+
+    &__open
+      z-index: 12
+
+
+    &__close
+      z-index: 11
+      opacity: 0
+
+  .resHeader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 65vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background: linear-gradient(165deg, #a5c0ee, #f9c5ec)
+    transition: all .4s ease-in-out
+    transform: translateY(-100%)
+    z-index: 10000
+
+    &__list
+      width: 100%
+      display: flex
+      flex-direction: column
+      height: auto
+      margin-top: 80px
+
+    &__item
+      width: 100%
+      padding: 0 20px
+      height: auto
+
+    &__link
+      width: 100%
+      display: block
+      line-height: 1.6
+      text-align: center
+      padding: 15px 0
+      color: #fff
+      border-bottom: 1px solid #fff
+
+    &__close
+      top: 12.5px
+      right: 10px
+      position: fixed
+      width: 35px
+      height: 35px
+      object-fit: contain
+      transition: all .4s ease-in-out
+
+
+  .slidedown
+    transform: translateY(0px)
+
+  .open
+    opacity: 1
+    z-index: 12
+
+  .close
+    opacity: 0
+    z-index: 11
+
+
+  .fv
+    height: auto
+
+    &__img
+      width: auto
+
+  .comparison__ttl, .ranking__ttl, .list__ttl, .point__ttl, .news__ttlBox, .--sideLine
+    width: 100%
+
+    img
+      height: 35px
+
+  .--slideLine
+    width: 100%
+
+  .table, .point__box, .ranking__content, .list__box, .fv__img, .news__wrap
+    padding: 0px
+
+  .cv__btn
+    a
+      width: auto
+
+  .filter__wrapper, .table, .point__box, .ranking__content, .list__box, .research
+    width: 98%
+
+  .filter__head
+    width: 100%
+    top: -8%
+
+  .filter__wrapper
+    padding-top: 0%
+
+  .filter__body
+    flex-direction: column
+
+  .filter__left
+    width: 100%
+
+    select
+      width: 100%
+
+  .filter__right
+    width: 100%
+
+    button
+      padding: 10px
+      margin-top: 20px
+
+  .filter__ttl
+    font-size: 18px
+
+  .filter__content
+    margin-top: 20px
+
+    &:nth-child(1)
+      margin-top: 20px
+
+    label
+      display: block
+      margin-top: 5px
+
+  .ranking__list ul
+    flex-wrap: wrap
+
+  .ranking__head
+    align-items: center
+    flex-direction: column
+
+    img
+      max-width: 400px
+
+  .comparison__ttl, .point__ttl, .ranking__ttl, .list__ttl
+    padding: 0px
+
+  .--spHeight
+    height: 100%
+
+  .table
+    margin-top: 40px
+
+    &__body
+      padding: 0px
+
+    &__ttl
+      font-size: 14px
+
+    &__link
+      p
+        font-size: 12px
+
+    &__sentence
+      font-size: 12px
+
+    &__box.--main img
+      width: 80px
+      height: 40px
+
+    &__list
+      &:nth-child(1) .--main
+        &:after
+          top: 0%
+          left: 3%
+          width: 50px
+          height: 50px
+          transform: translateY(-50%)
+
+      &:nth-child(2) .--main
+        &:after
+          top: 0%
+          left: 3%
+          width: 50px
+          height: 50px
+          transform: translateY(-50%)
+
+      &:nth-child(3) .--main
+        &:after
+          top: 0%
+          left: 3%
+          width: 50px
+          height: 50px
+          transform: translateY(-50%)
+
+    &__desc
+      font-size: 12px
+      line-height: 1.2
+
+      strong
+        font-size: 13px
+        line-height: 1.2
+
+  .cv__btn
+    width: 98%
+
+    a
+      font-size: 16px
+      padding: 15px 10px
+
+  .ranking
+    &__content
+
+      &:nth-child(2) .ranking__name:before
+        width: 50px
+        height: 50px
+
+      &:nth-child(3) .ranking__name:before
+        width: 50px
+        height: 50px
+
+      &:nth-child(4) .ranking__name:before
+        width: 50px
+        height: 50px
+
+  .comparison
+    padding: 40px 0
+
+  .point
+    padding: 40px 0
+
+    &__box
+      margin-top: 40px
+      flex-direction: column
+
+    &__content
+      width: 100%
+
+    &__txtBox
+      padding: 10px
+
+      img
+        height: 35px
+
+      h3
+        font-size: 17px
+
+    &__desc
+      font-size: 14px
+      margin-bottom: 20px
+
+  .ranking
+    padding: 20px 0 40px 0
+
+    &__menu
+      flex-direction: column
+
+    &__name
+      padding-left: 70px
+      font-size: 28px
+
+    &__content
+      padding-top: 40px
+
+    &__item
+      width: 100%
+
+    &__desc
+      margin: 0px
+      padding: 10px
+      text-align: justify
+
+    &__imgBox
+      flex-direction: column
+      align-items: center
+
+      img
+        width: 90%
+        margin-top: 20px
+
+        &:first-child
+          margin-top: 0px
+
+    &__th
+      font-size: 13px
+      line-height: 1.4
+      vertical-align: middle
+
+
+    &__list ul li
+      margin-bottom: 5px
+
+    &__list p
+      font-size: 12px
+      display: flex
+      justify-content: center
+      align-items: center
+
+  .list__box
+    flex-wrap: wrap
+    justify-content: center
+    padding-top: 30px
+
+  .list__content
+    width: 100%
+    max-width: 400px
+
+  footer
+    margin-top: 60px
+
+  .privacy
+
+    &__wrap
+      width: 90%
+
+      h1
+        font-size: 22px
+
+      h2
+        font-size: 18px
+
+      p
+        font-size: 14px
+
+    &__linkBox
+      justify-content: space-around
+
+      a
+        margin: 0
+        font-size: 14px
+
+        &:first-child
+          margin-left: -10px
+
+        &:last-child
+
+
+  .companyProfile__wrap
+    width: 95%
+    padding: 10% 5%
+
+    h2
+      font-size: calc(32 / 375 * 100vw)
+
+  .companyProfile table tbody tr
+    padding: 20px 0
+
+    th
+      font-size: 14px
+      width: 25%
+
+    td
+      font-size: 14px
+      width: 70%
+      margin-left: auto
+
+  .column
+
+    .cv__btn
+      width: 98%
+
+  .news
+    padding-top: 40px
+
+  .news__ttlBox
+    margin-bottom: 30px
+
+  .news__cardBox
+    flex-direction: column
+    align-items: center
+    gap: 20px
+
+  .news__item
+    width: 90%
+    max-width: 400px
+
+  .filter
+
+    &__left
+      flex-direction: column
+
+    &__content
+
+      &:nth-child(1)
+        width: 100%
+
+      &:nth-child(2), &:nth-child(3)
+        width: 100%
+
+    &__right
+      flex-direction: column
+
+      .filter__content:nth-child(1), .filter__content:nth-child(2)
+        width: 100%
+
+  .comparison__ttl
+    img
+      width: 85%
+      height: auto
+      max-width: 500px
+
+  .ranking__ttl
+    img
+      width: 92%
+      height: auto
+      max-width: 500px
+
+  .list__ttl
+    img
+      width: 81%
+      height: auto
+      max-width: 440px
+
+  .point__ttl
+    img
+      width: 82%
+      height: auto
+      max-width: 440px
+
+  .news__ttlBox
+    img
+      width: 89%
+      height: auto
+      max-width: 440px
+
+  .voice
+
+    &__ttl
+      margin-bottom: 30px
+
+      img
+        width: 100%
+
+    &__item
+      flex-direction: column
+
+    &__img
+      margin-right: 0px
+
+    &__txtBox
+      width: 100%
+      text-align: center
+      padding: 10px
+
+    &__txt
+      font-size: 16px
+
+    &__category
+      font-size: 14px
+
+    &__desc
+      font-size: 13px     
+
+@media(max-width:330px)
+
+  .table
+
+    &__box
+
+      &.--main
+        padding: 30px 0px
+
+    &__desc
+      font-size: 11px
+
+  .ranking
+
+    &__desc
+      font-size: 14px
+
+    &__name
+      font-size: 24px
+
+    &__txt
+      font-size: 16px
